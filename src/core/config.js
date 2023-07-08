@@ -6,6 +6,16 @@ const config = {
 		'difference',
 		'percentage',
 	],
+	backgroundColor: ['red',
+		'green',
+		'yellow',
+		'blue',
+		'orange',
+		'violet',
+		'brown',
+		'pink',
+		'yellowGreen',
+		'lightblue'],
 };
 
 export default config;

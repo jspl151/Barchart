@@ -45,7 +45,7 @@ const populationManager = (context) => {
 	const populationList = data.map(getPopulationList);
 	const minMaxValues = getMinMax(data);
 
-	return populationList;
+	return { populationList, minMaxValues };
 };
 
 export default populationManager;

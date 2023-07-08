@@ -4,11 +4,11 @@ import { map, pick } from '@laufire/utils/collection';
 const barWidth = 70;
 
 const DisplayBarChart = (context) => {
-	const { config: { backgroundColor }, data } = context;
-	const maxValue = Math.max(...pick(data, 'estimate2022'));
+	const { config: { backgroundColor }, data: { populationList }} = context;
+	const maxValue = Math.max(...pick(populationList, 'estimate2022'));
 
 	return <tbody>
-		{map(data, (population, index) => <tr key={ index }>
+		{map(populationList, (population, index) => <tr key={ index }>
 			<td>{population.state}</td>
 			<td><div style={ { display: 'flex' } }>
 				<div style={ {
@@ -16,7 +16,8 @@ const DisplayBarChart = (context) => {
 					height: '5vh',
 					backgroundColor: backgroundColor[index],
 				} }
-				/><span>{ population.estimate2022}</span>
+				/><span style={ { marginTop: '1.5%' } }>
+					{ population.estimate2022}</span>
 			</div>
 			</td>
 		</tr>)}

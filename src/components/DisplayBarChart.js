@@ -16,7 +16,7 @@ const DisplayBarChart = (context) => {
 					height: '5vh',
 					backgroundColor: backgroundColor[index],
 				} }
-				/><span style={ { marginTop: '1.5%' } }>
+				/><span className="barChartText">
 					{ population.estimate2022}</span>
 			</div>
 			</td>

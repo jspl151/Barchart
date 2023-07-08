@@ -24,8 +24,7 @@ const getState = (populations, minMaxValues) =>
 		Number(state.estimate2022) === minMaxValues).state;
 
 const getMinMax = (populations) => {
-	// eslint-disable-next-line id-match
-	const estimate2022 = pick(populations, 'estimate2022');
+	const estimateValue = pick(populations, 'estimate2022');
 	const maxValue = Math.max(...pick(populations, 'estimate2022'));
 	const minValue = Math.min(...pick(populations, 'estimate2022'));
 
@@ -35,7 +34,7 @@ const getMinMax = (populations) => {
 		maxValueState2022: getState(populations, maxValue),
 		minValueState2022: getState(populations, minValue),
 		totalPopulation2022: reduce(
-			estimate2022, (acc, cur) => acc + Number(cur), 0
+			estimateValue, (acc, cur) => acc + Number(cur), 0
 		),
 
 	};

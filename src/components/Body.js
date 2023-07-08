@@ -8,12 +8,17 @@ const Body = (context) => {
 		{map(data, (population, index) =>
 			<tr key={ index }>
 				{map(header, (heading, key) => {
-					const id = heading === 'estimate2022'
-						? 'format'
+					const className = heading === 'estimate2022'
+						? 'estimate2022Color'
 						: '';
 
-					return <td key={ key } className={ id }>
-						{population[heading]}</td>;
+					return (
+						<td
+							key={ key }
+							className={ className }
+							style={ { border: '2px solid black' } }
+						>
+							{population[heading]}</td>);
 				})}
 			</tr>)}
 	</tbody>;

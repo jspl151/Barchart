@@ -3,7 +3,7 @@ import { map, values } from '@laufire/utils/collection';
 
 const Header = ({ config: { header }}) => <tr>
 	{ values(map(header, (heading) =>
-		<th key={ heading } style={ { border: '2px solid black' } }>
+		<th key={ heading } className="applyBorder">
 			{ heading }</th>))}
 </tr>;
 

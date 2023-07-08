@@ -7,19 +7,12 @@ const Body = (context) => {
 	return <tbody>
 		{map(data, (population, index) =>
 			<tr key={ index }>
-				{map(header, (heading, key) => {
-					const className = heading === 'estimate2022'
-						? 'estimate2022Color'
-						: '';
-
-					return (
-						<td
-							key={ key }
-							className={ className }
-							style={ { border: '2px solid black' } }
-						>
-							{population[heading]}</td>);
-				})}
+				{map(header, (heading, key) =>
+					<td
+						key={ key }
+						className="applyBorder"
+					>
+						{population[heading]}</td>)}
 			</tr>)}
 	</tbody>;
 };

@@ -3,7 +3,7 @@ import { map, pick } from '@laufire/utils/collection';
 
 const barWidth = 70;
 
-const BarChartBody = (context) => {
+const DisplayBarChart = (context) => {
 	const { config: { backgroundColor }, data } = context;
 	const maxValue = Math.max(...pick(data, 'estimate2022'));
 
@@ -23,4 +23,4 @@ const BarChartBody = (context) => {
 	</tbody>;
 };
 
-export default BarChartBody;
+export default DisplayBarChart;

@@ -1,7 +1,13 @@
 import { React } from 'react';
-import BarChartTable from './BarChartTable';
+import BarChartHeader from './BarChartHeader';
+import DisplayBarChart from './DisplayBarChart';
 
 const BarChart = (context) =>
-	<BarChartTable { ...context }/>;
+	<table className="barChart">
+		<thead>
+			<BarChartHeader/>
+		</thead>
+		<DisplayBarChart { ...context }/>
+	</table>;
 
 export default BarChart;

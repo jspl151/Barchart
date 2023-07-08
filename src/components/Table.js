@@ -2,7 +2,7 @@ import { React } from 'react';
 import Header from './Header';
 import Body from './Body';
 
-const Table = (context) => <table className="applyBorder">
+const Table = (context) => <table className="tableBorder">
 	<thead>
 		<Header { ...context }/>
 	</thead>

@@ -10,7 +10,7 @@ const Body = (context) => {
 				{map(header, (heading, key) =>
 					<td
 						key={ key }
-						className="applyBorder"
+						className="tableBorder"
 					>
 						{population[heading]}</td>)}
 			</tr>)}
